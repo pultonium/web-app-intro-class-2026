@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>食事メニュー記録アプリ</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>食事メニュー記録アプリ</h1>
+    </header>
+
+    <main class="meal-card">
+      <div id="error-message" class="error-message" style="display: none"></div>
+
+      <form id="meal-form" class="input-area">
+        <div class="form-row">
+          <input type="date" id="meal-date" class="meal-input" required />
+          <select id="meal-type" class="meal-input">
+            <option value="朝食">朝食</option>
+            <option value="昼食">昼食</option>
+            <option value="夕食">夕食</option>
+            <option value="間食">間食</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input
+            type="text"
+            id="meal-menu"
+            class="meal-input flex-grow"
+            placeholder="メニュー名（例: 生姜焼き定食）"
+            maxlength="100"
+            autocomplete="off"
+            required
+          />
+          <input
+            type="number"
+            id="meal-calories"
+            class="meal-input cal-input"
+            placeholder="kcal"
+            min="0"
+            max="10000"
+          />
+          <button type="submit" class="meal-button">記録</button>
+        </div>
+      </form>
+
+      <ul id="meal-list" class="meal-list"></ul>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Meal Tracker App</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
