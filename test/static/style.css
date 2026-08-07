@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #10b981;
+  color: white;
+  padding: 16px 24px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.meal-card {
+  background-color: white;
+  max-width: 650px;
+  width: 100%;
+  margin: 24px auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border: 1px solid #fecaca;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+}
+
+.meal-input {
+  padding: 10px 14px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: white;
+}
+
+.meal-input:focus {
+  border-color: #10b981;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.cal-input {
+  width: 100px;
+}
+
+.meal-button {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.meal-button:hover {
+  background-color: #059669;
+}
+
+.meal-list {
+  list-style: none;
+}
+
+.meal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.meal-item:hover {
+  background-color: #f0fdf4;
+}
+
+.meal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.meal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meal-date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.meal-badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.badge-朝食 { background-color: #f59e0b; }
+.badge-昼食 { background-color: #10b981; }
+.badge-夕食 { background-color: #6366f1; }
+.badge-間食 { background-color: #ec4899; }
+
+.meal-body {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.meal-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f2937;
+  word-break: break-word;
+}
+
+.meal-calories {
+  font-size: 14px;
+  color: #059669;
+  font-weight: bold;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  background-color: transparent;
+  color: #9ca3af;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 12px;
+}
+
+.delete-button:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+.footer {
+  background-color: #374151;
+  color: #9ca3af;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .meal-card {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .cal-input {
+    width: 100%;
+  }
+
+  .meal-button {
+    width: 100%;
+  }
+}
